@@ -1,0 +1,22 @@
+{
+  "name": "Black List",
+  "description": "This extension allows you to block sites that are on the blacklist.",
+  "version": "1.0",
+  "author": "Juan Esteban Lopez",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["storage", "declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
